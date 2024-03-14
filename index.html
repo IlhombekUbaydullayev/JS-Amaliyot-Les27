@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS | Lesson27</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="row py-5 my-5">
+        <div class="col-md-6 offset-3">
+            <div class="form-group">
+                <label for="sonA">A sonini kiriting</label>
+                <input type="text" onkeyup="clickBtn()" class="form-control" placeholder="A soni" id="sonA">
+            </div>
+            <div class="form-group">
+                <label for="sonB">B sonini kiriting</label>
+                <input type="text" onkeyup="clickBtn()" class="form-control" placeholder="B soni" id="sonB">
+            </div>
+            <div class="form-group">
+                <label for="amal">Amalni tanlang</label>
+                <select id="amal" class="form-control" onchange="clickBtn()">
+                    <option value="+">Qo'shish</option>
+                    <option value="-">Ayirish</option>
+                    <option value="*">Ko'paytirish</option>
+                    <option value="/">Bo'lish</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <strong>Javob: </strong> <span id="display">0</span>
+            </div>
+            <div class="form-group text-right">
+                <button type="button" class="btn btn-success" onclick="clickBtn()">Hisoblash</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="fish">F.I.SH</label>
+                        <input type="text" class="form-control" id="fish" placeholder="F.I.SH ni kiriting...">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="uchrashuv">Uchrashuv</label>
+                        <select class="form-control" id="uchrashuv">
+                            <option value="MYu vs MC">MYu vs MC</option>
+                            <option value="Lev. vs Chel.">Lev. vs Chel.</option>
+                            <option value="Tot. vs Evr.">Tot. vs Evr.</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="pay">To'lov</label>
+                        <input type="text" class="form-control" id="pay" placeholder="To'lov summasi...">
+                    </div>
+                </div>
+                <div class="col-md-3 pt-4 mt-1">
+                    <button type="button" class="btn btn-success btn-block" onclick="draw()">Ro'yxatga olish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover table-striped">
+                <tr>
+                    <th>T/R</th>
+                    <th>F.I.SH</th>
+                    <th>To'lov summasi</th>
+                    <th>Uchrashuv</th>
+                    <th>Sana</th>
+                </tr>
+                <tbody id="tBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/jQuery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
